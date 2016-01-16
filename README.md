@@ -11,7 +11,7 @@ A [Node](https://nodejs.org/) module to get the latest published full [release](
 ```javascript
 const ghLatestRelease = require('gh-latest-release');
 
-ghLatestRelease('strongloop/fsevents', release => console.log(release));
+ghLatestRelease('strongloop/fsevents').then(release => console.log(release));
 ```
 
 ```javascript
