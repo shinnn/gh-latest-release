@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const ghLatestRelease = require('.');
 const test = require('tape');
