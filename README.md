@@ -16,12 +16,12 @@ ghLatestRelease('strongloop/fsevents').then(release => console.log(release));
 
 ```javascript
 {
-  url: 'https://api.github.com/repos/strongloop/fsevents/releases/2265953',
-  assets_url: 'https://api.github.com/repos/strongloop/fsevents/releases/2265953/assets',
-  upload_url: 'https://uploads.github.com/repos/strongloop/fsevents/releases/2265953/assets{?name,label}',
-  html_url: 'https://github.com/strongloop/fsevents/releases/tag/v1.0.6',
-  id: 2265953,
-  tag_name: 'v1.0.6',
+  url: 'https://api.github.com/repos/strongloop/fsevents/releases/5506311',
+  assets_url: 'https://api.github.com/repos/strongloop/fsevents/releases/5506311/assets',
+  upload_url: 'https://uploads.github.com/repos/strongloop/fsevents/releases/5506311/assets{?name,label}',
+  html_url: 'https://github.com/strongloop/fsevents/releases/tag/v1.1.1',
+  id: 5506311,
+  tag_name: 'v1.1.1',
   target_commitish: 'master',
   name: '',
   draft: false,
@@ -45,12 +45,12 @@ ghLatestRelease('strongloop/fsevents').then(release => console.log(release));
     site_admin: false
   },
   prerelease: false,
-  created_at: '2015-12-10T14:01:28Z',
-  published_at: '2015-12-10T14:04:19Z',
+  created_at: '2017-02-20T05:14:55Z',
+  published_at: '2017-02-20T05:35:02Z',
   assets: [],
-  tarball_url: 'https://api.github.com/repos/strongloop/fsevents/tarball/v1.0.6',
-  zipball_url: 'https://api.github.com/repos/strongloop/fsevents/zipball/v1.0.6',
-  body: 'Updated node-pre-gyp to 0.6.17'
+  tarball_url: 'https://api.github.com/repos/strongloop/fsevents/tarball/v1.1.1',
+  zipball_url: 'https://api.github.com/repos/strongloop/fsevents/zipball/v1.1.1',
+  body: 'Back to specifying compatibility with darwin platform only because some use cases rely upon it.\n'
 }
 ```
 
@@ -72,12 +72,12 @@ const ghLatestRelease = require('gh-latest-release');
 
 *ownerRepo*: `String` (`/`-separated owner and repository names, for example <https://github.com/es128/ssl-utils> → `'es128/ssl-utils'`)  
 *options*: `Object` ([gh-get](https://github.com/shinnn/gh-get#options) options)  
-Return: [`Promise`](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-constructor) instance
+Return: `Promise<Object>`
 
-It makes an [API](https://developer.github.com/v3/) request to [get the latest release information](https://developer.github.com/v3/repos/releases/#get-the-latest-release), and returns a promise. The promise will be [*fulfilled*](https://promisesaplus.com/#point-26) with a [JSON object](https://developer.github.com/v3/repos/releases/#response-2) if successful, otherwise [*rejected*](https://promisesaplus.com/#point-30) with an error.
+It makes an [API](https://developer.github.com/v3/) request to [get the latest release information](https://developer.github.com/v3/repos/releases/#get-the-latest-release), and returns a [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise will be [*fulfilled*](https://promisesaplus.com/#point-26) with an [object](https://developer.github.com/v3/repos/releases/#response-2) if successful, otherwise [*rejected*](https://promisesaplus.com/#point-30) with an error.
 
 ## License
 
-Copyright (c) 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2016 - 2017 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
